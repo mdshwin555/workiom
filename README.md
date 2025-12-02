@@ -12,13 +12,13 @@ Password Validation
 
 Success
 
-<img src="screenshots/splash.png" width="180"/>
+<img src="screenshots/splash.jpg" width="180"/>
 
-<img src="screenshots/signup.png" width="180"/>
+<img src="screenshots/signup.jpg" width="180"/>
 
-<img src="screenshots/password.png" width="180"/>
+<img src="screenshots/password.jpg" width="180"/>
 
-<img src="screenshots/success.png" width="180"/>
+<img src="screenshots/success.jpg" width="180"/>
 
 Note: These screenshots demonstrate the flow from session check to successful registration.
 
