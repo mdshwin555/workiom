@@ -12,6 +12,14 @@ Password Validation
 
 Success
 
+<!-- Add Splash Image Here -->
+
+<!-- Add Form Image Here -->
+
+<!-- Add Password Image Here -->
+
+<!-- Add Success Image Here -->
+
 <img src="screenshots/splash.jpg" width="200"/>
 
 <img src="screenshots/signup.jpg" width="200"/>
