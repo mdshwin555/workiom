@@ -1,159 +1,85 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Workiom Technical Task - Sign Up Flow</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #f5f5f5;
-            color: #333;
-        }
-        h1, h2 {
-            color: #0e0f12;
-        }
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        .section {
-            margin-bottom: 30px;
-        }
-        .images img {
-            width: 200px;
-            margin: 10px;
-            border-radius: 8px;
-        }
-        .images {
-            display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-        .key-features ul {
-            list-style-type: none;
-            padding-left: 20px;
-        }
-        .key-features li {
-            margin-bottom: 10px;
-        }
-        .key-features li:before {
-            content: "✔️";
-            margin-right: 10px;
-        }
-        .tech-stack ul {
-            list-style-type: none;
-            padding-left: 20px;
-        }
-        .tech-stack li {
-            margin-bottom: 10px;
-        }
-        .code-block {
-            background-color: #333;
-            color: #fff;
-            padding: 10px;
-            border-radius: 5px;
-            font-family: 'Courier New', Courier, monospace;
-            margin: 20px 0;
-            white-space: pre-wrap;
-        }
-        .project-structure {
-            background-color: #f4f4f4;
-            padding: 20px;
-            border-radius: 8px;
-            font-family: 'Courier New', Courier, monospace;
-        }
-        .setup-run {
-            margin-top: 20px;
-        }
-        .footer {
-            margin-top: 30px;
-            text-align: center;
-            font-size: 14px;
-            color: #777;
-        }
-        .author {
-            font-size: 16px;
-            font-weight: bold;
-            color: #0e0f12;
-        }
-    </style>
-</head>
-<body>
+Workiom Technical Task - Sign Up Flow
 
-    <div class="container">
-        <div class="section">
-            <h1>Workiom Technical Task - Sign Up Flow</h1>
-            <p>
-                تم تطوير دورة كاملة للتسجيل والدخول كجزء من اختبار تقني لـ <strong>Workiom</strong>. يوضح هذا المشروع دورة التسجيل الكاملة للمستخدم بما في ذلك التحقق من توفر المساحة، التحقق من قوة كلمة المرور، وإدارة حالة التوثيق المستمرة.
-            </p>
-        </div>
+A fully functional Sign-Up and Authentication flow developed as a technical assessment for Workiom. This project demonstrates a complete user registration cycle including checking tenant availability, password validation, and persistent authentication state management.
 
-        <div class="section images">
-            <h2>📱 Screenshots</h2>
-            <p> - Splash & Check</p>
-            <p> - Sign Up Form</p>
-            <p> - Password Validation</p>
-            <p> - Success</p>
+📱 Screenshots
 
-            <img src="screenshots/splash.jpg" alt="Splash Screen" />
-            <img src="screenshots/signup.jpg" alt="Sign Up Form" />
-            <img src="screenshots/password.jpg" alt="Password Validation" />
-            <img src="screenshots/success.jpg" alt="Success Screen" />
-        </div>
+Splash & Check
 
-        <div class="section key-features">
-            <h2>🚀 Key Features</h2>
-            <ul>
-                <li>Complete Authentication Cycle</li>
-                <li>Dynamic Edition Fetching</li>
-                <li>Tenant Validation</li>
-                <li>Password Strength</li>
-                <li>Token Persistence</li>
-                <li>Session Validation</li>
-                <li>UI/UX:
-                    <ul>
-                        <li>Pixel-perfect implementation matching the Figma design.</li>
-                        <li>Responsive design using sizer package.</li>
-                        <li>Custom top-aligned Snackbar using Overlay.</li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
+Sign Up Form
 
-        <div class="section tech-stack">
-            <h2>🛠 Tech Stack & Architecture</h2>
-            <p>يتبع هذا المشروع معمارية <strong>Feature-First</strong> مجتمعة مع مبادئ <strong>Clean Architecture</strong> لضمان القابلية للتوسع وسهولة الاختبار.</p>
-            <h3>Architecture Breakdown:</h3>
-            <ul>
-                <li><strong>Core Layer:</strong> Contains shared utilities, constants, network clients (Dio), and routing.</li>
-                <li><strong>Features (Auth):</strong>
-                    <ul>
-                        <li>Data Layer: AuthApiService (Dio calls) and Models.</li>
-                        <li>Logic Layer: Cubit for state management (SplashCubit, PasswordCubit, TenantFormCubit).</li>
-                        <li>Presentation Layer: Stateless Pages and reusable Widgets.</li>
-                    </ul>
-                </li>
-            </ul>
+Password Validation
 
-            <h3>Libraries Used:</h3>
-            <ul>
-                <li><strong>State Management:</strong> flutter_bloc (Cubit).</li>
-                <li><strong>Networking:</strong> dio (with interceptors and error handling).</li>
-                <li><strong>Routing:</strong> go_router for declarative routing.</li>
-                <li><strong>Storage:</strong> flutter_secure_storage for secure token persistence.</li>
-                <li><strong>UI:</strong> sizer for responsive UI.</li>
-            </ul>
-        </div>
+Success
 
-        <div class="section project-structure">
-            <h2>📂 Project Structure</h2>
-            <pre>
+<!-- Add Splash Image Here -->
+
+<!-- Add Form Image Here -->
+
+<!-- Add Password Image Here -->
+
+<!-- Add Success Image Here -->
+
+<img src="screenshots/splash.jpg" width="200"/>
+
+<img src="screenshots/signup.jpg" width="200"/>
+
+<img src="screenshots/password.jpg" width="200"/>
+
+<img src="screenshots/success.jpg" width="200"/>
+
+🚀 Key Features
+
+Complete Authentication Cycle:
+
+Dynamic Edition Fetching: Fetches the first registrable edition ID from the server dynamically (no hardcoded IDs).
+
+Tenant Validation: Checks if the workspace/tenant name is available in real-time.
+
+Password Strength: robust password validation based on server configurations.
+
+Token Persistence: Saves the authentication token securely using flutter_secure_storage.
+
+Session Validation: Verifies the user session on app start via the Splash screen.
+
+UI/UX:
+
+Pixel-perfect implementation matching the Figma design.
+
+Responsive design using sizer package.
+
+Custom top-aligned Snackbar using Overlay.
+
+🛠 Tech Stack & Architecture
+
+This project follows the Feature-First architecture combined with Clean Architecture principles to ensure scalability and testability.
+
+Architecture Breakdown:
+
+Core: Contains shared utilities, constants, network clients (Dio), and routing.
+
+Features (Auth):
+
+Data Layer: AuthApiService (Dio calls) and Models.
+
+Logic Layer: Cubit for state management (SplashCubit, PasswordCubit, TenantFormCubit).
+
+Presentation Layer: Stateless Pages and reusable Widgets.
+
+Libraries Used:
+
+State Management: flutter_bloc (Cubit).
+
+Networking: dio (with interceptors and error handling).
+
+Routing: go_router for declarative routing.
+
+Storage: flutter_secure_storage for secure token persistence.
+
+UI: sizer for responsive UI.
+
+📂 Project Structure
+
 lib/
 ├── core/
 │   ├── constants/       # API routes, Colors, Images
@@ -168,34 +94,29 @@ lib/
         └── presentation/
             ├── pages/   # Application Screens
             └── widgets/ # Reusable UI Components
-            </pre>
-        </div>
 
-        <div class="section setup-run">
-            <h2>⚙️ Setup & Run</h2>
-            <p>Clone the repository:</p>
-            <div class="code-block">
-                git clone [https://github.com/YOUR_USERNAME/workiom-task.git](https://github.com/YOUR_USERNAME/workiom-task.git)
-            </div>
 
-            <p>Install dependencies:</p>
-            <div class="code-block">
-                flutter pub get
-            </div>
+⚙️ Setup & Run
 
-            <p>Run the app:</p>
-            <div class="code-block">
-                flutter run
-            </div>
+Clone the repository:
 
-            <p><strong>Note for Android:</strong> Ensure your <code>minSdkVersion</code> is set to 19 or higher in <code>android/app/build.gradle</code> to support secure storage.</p>
-        </div>
+git clone [https://github.com/YOUR_USERNAME/workiom-task.git](https://github.com/YOUR_USERNAME/workiom-task.git)
 
-        <div class="footer">
-            <p class="author">👨‍💻 Author: Mouayad Shwin</p>
-            <p>Demonstrating proficiency in Flutter, State Management, and Clean Code practices.</p>
-        </div>
-    </div>
 
-</body>
-</html>
+Install dependencies:
+
+flutter pub get
+
+
+Run the app:
+
+flutter run
+
+
+Note for Android: Ensure your minSdkVersion is set to 19 or higher in android/app/build.gradle to support secure storage.
+
+👨‍💻 Author
+
+Mouayad Shwin
+
+Demonstrating proficiency in Flutter, State Management, and Clean Code practices.
