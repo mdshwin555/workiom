@@ -30,32 +30,34 @@ class CreateAccountPage extends StatelessWidget {
               ),
               SizedBox(height: 15.h),
               Expanded(
-                child: Column(
-                  children: [
-                    SignInButton(
-                      text: 'Continue with Google',
-                      imagePath: AppImages.googleIcon,
-                      onPressed: () {},
-                    ),
-                    SizedBox(height: 3.h),
-                    Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 3.w),
-                      child: Text(
-                        'Or',
-                        style: TextStyle(
-                          fontSize: 15.sp,
-                          color: AppColors.greyText
+                child: SingleChildScrollView(
+                  child: Column(
+                    children: [
+                      SignInButton(
+                        text: 'Continue with Google',
+                        imagePath: AppImages.googleIcon,
+                        onPressed: () {},
+                      ),
+                      SizedBox(height: 3.h),
+                      Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 3.w),
+                        child: Text(
+                          'Or',
+                          style: TextStyle(
+                            fontSize: 15.sp,
+                            color: AppColors.greyText
+                          ),
                         ),
                       ),
-                    ),
-                    SizedBox(height: 3.h),
-                    SignInButton(
-                      text: 'Continue with email',
-                      showTrailingIcon: true,
-                      onPressed: () => context.push('/enter-password'),
-                    ),
-                    const TermsAndPrivacyText(),
-                  ],
+                      SizedBox(height: 3.h),
+                      SignInButton(
+                        text: 'Continue with email',
+                        showTrailingIcon: true,
+                        onPressed: () => context.push('/enter-password'),
+                      ),
+                      const TermsAndPrivacyText(),
+                    ],
+                  ),
                 ),
               ),
               const LanguageSelectorRow(),

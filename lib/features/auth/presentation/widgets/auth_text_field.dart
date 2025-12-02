@@ -65,19 +65,19 @@ class AuthTextField extends StatelessWidget {
                 ? GestureDetector(
               onTap: () => controller!.clear(),
               child: Container(
-                width: 3.4.h,
-                height: 3.4.h,
+                width: 2.5.h,
+                height: 2.5.h,
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
                   border: Border.all(
-                    color: AppColors.greyText.withOpacity(0.4),
-                    width: 1.3,
+                    color: AppColors.greyText.withOpacity(0.6),
+                    width: 1.7,
                   ),
                 ),
                 child: Icon(
                   Icons.close,
-                  size: 14.sp,
-                  color: AppColors.greyText,
+                  size: 15.sp,
+                  color: AppColors.greyText.withOpacity(0.6),
                 ),
               ),
             )
