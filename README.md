@@ -1,8 +1,8 @@
-Workiom Technical Task - Sign Up Flow
+🚀 Workiom Technical Task - Sign Up Flow
 
-A fully functional Sign-Up and Authentication flow developed as a technical assessment for Workiom. This project demonstrates a complete user registration cycle including checking tenant availability, password validation, and persistent authentication state management.
+A fully functional Sign-Up and Authentication flow developed as a technical assessment for Workiom. This project demonstrates a complete user registration cycle including checking tenant availability, password validation, and persistent authentication state management using Clean Architecture.
 
-📱 Screenshots
+📱 App Preview
 
 Splash & Check
 
@@ -12,95 +12,108 @@ Password Validation
 
 Success
 
-<!-- Add Splash Image Here -->
+<img src="screenshots/splash.png" width="180"/>
 
-<!-- Add Form Image Here -->
+<img src="screenshots/signup.png" width="180"/>
 
-<!-- Add Password Image Here -->
+<img src="screenshots/password.png" width="180"/>
 
-<!-- Add Success Image Here -->
+<img src="screenshots/success.png" width="180"/>
 
-<img src="screenshots/splash.jpg" width="200"/>
+Note: These screenshots demonstrate the flow from session check to successful registration.
 
-<img src="screenshots/signup.jpg" width="200"/>
+✨ Key Features
 
-<img src="screenshots/password.jpg" width="200"/>
+🔐 Authentication & Security
 
-<img src="screenshots/success.jpg" width="200"/>
+Dynamic Edition Fetching: Automatically fetches the first valid registrable edition ID from the server (no hardcoded IDs).
 
-🚀 Key Features
+Tenant Validation: Real-time check for workspace/tenant name availability via API.
 
-Complete Authentication Cycle:
+Password Strength: Robust validation rules fetched directly from server configurations.
 
-Dynamic Edition Fetching: Fetches the first registrable edition ID from the server dynamically (no hardcoded IDs).
+Token Persistence: Securely saves the authentication token using flutter_secure_storage.
 
-Tenant Validation: Checks if the workspace/tenant name is available in real-time.
+Session Management: Smart Splash screen that verifies user session on app start.
 
-Password Strength: robust password validation based on server configurations.
+🎨 UI/UX Design
 
-Token Persistence: Saves the authentication token securely using flutter_secure_storage.
+Pixel-Perfect Implementation: Matches the Figma design 100%.
 
-Session Validation: Verifies the user session on app start via the Splash screen.
+Responsive Layout: Utilizes the sizer package for adaptivity across screen sizes.
 
-UI/UX:
+Custom Overlay: Top-aligned custom Snackbar for success/error messages.
 
-Pixel-perfect implementation matching the Figma design.
+🛠 Tech Stack
 
-Responsive design using sizer package.
+This project follows the Feature-First architecture combined with Clean Architecture principles.
 
-Custom top-aligned Snackbar using Overlay.
+Category
 
-🛠 Tech Stack & Architecture
+Libraries / Tools
 
-This project follows the Feature-First architecture combined with Clean Architecture principles to ensure scalability and testability.
+State Management
 
-Architecture Breakdown:
+flutter_bloc (Cubit)
 
-Core: Contains shared utilities, constants, network clients (Dio), and routing.
+Networking
 
-Features (Auth):
+dio (Interceptors & Error Handling)
 
-Data Layer: AuthApiService (Dio calls) and Models.
+Routing
 
-Logic Layer: Cubit for state management (SplashCubit, PasswordCubit, TenantFormCubit).
+go_router (Declarative Routing)
 
-Presentation Layer: Stateless Pages and reusable Widgets.
+Storage
 
-Libraries Used:
+flutter_secure_storage
 
-State Management: flutter_bloc (Cubit).
+UI Responsiveness
 
-Networking: dio (with interceptors and error handling).
-
-Routing: go_router for declarative routing.
-
-Storage: flutter_secure_storage for secure token persistence.
-
-UI: sizer for responsive UI.
+sizer
 
 📂 Project Structure
 
+Matches the exact structure implemented in the repository:
+
 lib/
 ├── core/
-│   ├── constants/       # API routes, Colors, Images
-│   ├── network/         # Dio Client setup
-│   └── routes/          # App Router configuration
-└── features/
-    └── auth/
-        ├── data/
-        │   ├── models/  # Data models
-        │   └── services/# API Service classes
-        ├── logic/       # Cubits (State Management)
-        └── presentation/
-            ├── pages/   # Application Screens
-            └── widgets/ # Reusable UI Components
+│   ├── constants/
+│   │   ├── api_routes.dart
+│   │   ├── app_colors.dart
+│   │   ├── app_images.dart
+│   │   └── custom_snack_bar.dart
+│   ├── network/
+│   │   └── dio_client.dart
+│   └── router/
+│       └── app_router.dart
+├── features/
+│   └── auth/
+│       ├── data/
+│       │   ├── models/
+│       │   │   └── password_complexity_model.dart
+│       │   └── services/
+│       │       └── auth_api_service.dart
+│       ├── logic/
+│       │   ├── password_cubit/
+│       │   ├── splash_cubit/
+│       │   └── tenant_form_cubit/
+│       └── presentation/
+│           ├── pages/
+│           │   ├── create_account_page.dart
+│           │   ├── enter_company_page.dart
+│           │   ├── enter_password_page.dart
+│           │   ├── splash_page.dart
+│           │   └── success_page.dart
+│           └── widgets/
+└── main.dart
 
 
-⚙️ Setup & Run
+⚙️ Setup & Installation
 
 Clone the repository:
 
-git clone [https://github.com/YOUR_USERNAME/workiom-task.git](https://github.com/YOUR_USERNAME/workiom-task.git)
+git clone [https://github.com/mdshwin555/workiom.git](https://github.com/mdshwin555/workiom.git)
 
 
 Install dependencies:
@@ -113,10 +126,10 @@ Run the app:
 flutter run
 
 
-Note for Android: Ensure your minSdkVersion is set to 19 or higher in android/app/build.gradle to support secure storage.
+⚠️ Android Note: Ensure your minSdkVersion is set to 19 or higher in android/app/build.gradle to support secure storage.
 
 👨‍💻 Author
 
 Mouayad Shwin
 
-Demonstrating proficiency in Flutter, State Management, and Clean Code practices.
+Demonstrating proficiency in Flutter, State Management (Bloc), and Clean Code practices.
